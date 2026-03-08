@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Your name:");
+        String name = in.nextLine();
+
+        System.out.println("Number of subjects:");
+        int number = in.nextInt();
+
+        double totalGrades = 0;
+
+        for(int i = 1; i <= number; i++){
+            System.out.println("Grade of subject " + i + ":");
+            double x = in.nextDouble();
+            totalGrades += x;
+        }
+
+        double avg = totalGrades / number;
+
+        System.out.println("Student Name: " + name);
+        System.out.println("Total Grades: " + totalGrades);
+        System.out.println("Average: " + avg);
+
+        if(avg >= 90){
+            System.out.println("Excellent");
+        }else if(avg >= 80){
+            System.out.println("Very Good");
+        }else if(avg >= 70){
+            System.out.println("Good");
+        }else{
+            System.out.println("Needs Improvement");
+        }
+
+        System.out.println("Odd numbers from 1 to 20:");
+        for(int i = 1; i <= 20; i++){
+            if(i % 2 != 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
